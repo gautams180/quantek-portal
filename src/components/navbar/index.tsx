@@ -9,7 +9,7 @@ interface HeaderItem {
 
 export const Navbar: React.FC = () => {
   return (
-    <header className="w-full flex py-4 px-6 text-white bg-transparent sticky top-0 z-[100]">
+    <header className="w-full flex py-4 px-12 text-white bg-gray-400 bg-clip-padding backdrop-filter bg-opacity-10 backdrop-blur-sm sticky top-0 z-[100] ">
       <div className="w-full flex justify-between items-center">
         <div className="flex ml-1 w-2/12 text-2xl">
           <QuantekIcon />
