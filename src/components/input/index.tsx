@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
-interface IInput {
+interface Input {
+  name: string;
   label: string;
   value?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -10,7 +11,8 @@ interface IInput {
   labelClassName?: string;
 }
 
-export const Input: React.FC<IInput> = ({
+export const Input: React.FC<Input> = ({
+  name,
   label,
   value,
   onChange,
@@ -19,17 +21,18 @@ export const Input: React.FC<IInput> = ({
   inputClassName,
   labelClassName,
 }) => {
-  const wrapperClass = clsx('flex flex-col', className);
-  const labelClass = clsx('px-3 py-1 text-white text-xl', labelClassName);
+  const wrapperClass = clsx('flex flex-col font-poppins', className);
+  const labelClass = clsx('pb-1 text-white md:text-xl font-poppins', labelClassName);
   const inputClass = clsx(
-    'bg-transparent w-full border-b outline-0 border-custom-pink px-3 py-3 text-white',
+    'bg-transparent w-full border-b outline-0 border-custom-pink text-white md:text-xl font-poppins',
     inputClassName,
   );
 
   return (
     <div className={wrapperClass}>
-      <h1 className={labelClass}>{label}</h1>
+      <label className={labelClass}>{label}</label>
       <input
+        name={name}
         className={inputClass}
         value={value}
         onChange={onChange}
