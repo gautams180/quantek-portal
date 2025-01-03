@@ -3,21 +3,21 @@ import { Button } from '../button';
 
 export const HeroSection: React.FC = () => {
   return (
-    <div className="bg-[#00021b]">
+    <div className="bg-hero bg-cover"  >
       <div className="w-11/12 mx-auto flex py-4 px-8 text-white h-[90vh]">
-        <div className="w-full flex flex-col items-start justify-center">
-          <div className="flex flex-col items-start gap-y-5">
-            <div className="flex flex-col items-start text-7xl">
-              <h1 className="hero-section-header-1">
-                <span className="mr-4">Custom</span>
+        <div className="w-full flex flex-col items-center md:items-start justify-center">
+          <div className="flex flex-col items-center md:items-start gap-y-5">
+            <div className="flex flex-col items-center md:items-start text-5xl md:text-7xl">
+              <h1 className="hero-section-header-1 flex flex-col items-center md:flex-row">
+                <span className="md:mr-4">Custom</span>
                 <span>Website</span>
               </h1>
-              <h1 className="hero-section-header-2">
-                <span className="mr-4">Development</span>
+              <h1 className="hero-section-header-2 flex flex-col items-center md:flex-row">
+                <span className="md:mr-4">Development</span>
                 <span>Service</span>
               </h1>
             </div>
-            <p className="w-8/12 text-base font-extralight text-left">
+            <p className="w-11/12 md:w-8/12 text-base text-center md:text-left  ">
               MultiversX, the EGLD network, is a distributed blockchain network
               for next-gen applications. Decentralized via 3,000+ nodes,
               scalable through sharding, fast, secure & green.
@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
           <div className="flex mt-5">
             <Button
               variant="primary"
-              className="!bg-pink-400"
+              className="!bg-[#D70F98]"
               rounded={true}
               rightIcon={<UpArrowIcon />}
             >

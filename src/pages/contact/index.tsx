@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '../../components/button';
 import { GlassCard } from '../../components/glassCard';
 import { Input } from '../../components/input';
@@ -13,7 +13,9 @@ export const Contact = () => {
     name: "",
     email:"",
     question:""
-  })
+  });
+
+  const [active, setActive] = useState<boolean>(false);
 
   const {name,email,question} = formData;
 
@@ -43,6 +45,15 @@ export const Contact = () => {
       alert('Error submitting form.');
     }
   }
+
+  useEffect(() => {
+    if(name != "" && email != "" && question != ""){
+      setActive(true);
+    }
+    else{
+      setActive(false);
+    }
+  },[formData]);
 
   const labelClass = 'my-4';
   const wrapperClass = 'my-4';
@@ -85,7 +96,7 @@ export const Contact = () => {
               inputClassName={inputClassName}
               onChange={(e) => {handleChange(e)}}
             />
-            <Button text="Send" className="mx-auto !w-[150px] !border-0 mt-4" onClick={(e) => handleSubmit(e)} />
+            <Button text="Send" className={active ? "mx-auto !w-[150px] !border-0 mt-4" : "mx-auto !w-[150px] !border-0 mt-4 text-opacity-60"} onClick={(e) => handleSubmit(e)} />
           </div>
         </GlassCard>
       </div>

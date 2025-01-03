@@ -37,6 +37,7 @@ export const Input: React.FC<Input> = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        required
       />
     </div>
   );
