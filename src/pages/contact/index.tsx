@@ -37,6 +37,7 @@ export const Contact = () => {
         body: JSON.stringify(formData),
       });
       const result = await response.json();
+      console.log("Contact form response:",result);
 
       setFormData({name:"", email:"", question:""});
     }
@@ -62,7 +63,7 @@ export const Contact = () => {
 
 
   return (
-    <div className="flex flex-col w-full px-8 my-10">
+    <div className="flex flex-col w-full px-8 my-10" id='contact'>
       <div className="w-11/12 md:w-6/12 mx-auto mb-8">
         <h1 className="text-center text-6xl text-white font-bold">
           Contact

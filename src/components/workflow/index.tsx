@@ -6,7 +6,7 @@ export const Workflow = () => {
 
 
   return (
-    <div className="flex flex-col gap-12 w-full px-8 py-20 my-10">
+    <div className="flex flex-col gap-12 w-full px-8 py-20 my-10" id='work'>
       <Heading
         heading={'Workflow that just works'}
         containerClass="!w-11/12 md:!w-10/12 lg:!w-9/12 text-center md:text-start"

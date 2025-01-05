@@ -21,18 +21,22 @@ export const HEADERS = [
   {
     label: 'Work',
     link: '/',
+    id: 'work',
   },
   {
     label: 'About',
     link: '/',
+    id: 'services',
   },
   // {
   //   label: 'Career',
   //   link: '/',
+  //   id: 'career',
   // },
   {
     label: 'Contact',
     link: '/contact',
+    id: 'contact',
   },
 ];
 
