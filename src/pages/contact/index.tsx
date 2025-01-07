@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '../../components/button';
 import { GlassCard } from '../../components/glassCard';
 import { Input } from '../../components/input';
+const googleSheetApi: string = process.env.REACT_APP_GOOGLE_SHEET_API || ""
 
 export const Contact = () => {
 
@@ -28,14 +29,17 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://api.sheetbest.com/sheets/b056ad61-acf6-4524-b787-be3d9ab59ed7", {
-        method: "POST",
-        mode: "cors",
+      const response = await fetch(
+        googleSheetApi,
+        {
+          method: 'POST',
+          mode: 'cors',
         headers: {
-          "Content-Type": "application/json",
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
       const result = await response.json();
       console.log("Contact form response:",result);
 

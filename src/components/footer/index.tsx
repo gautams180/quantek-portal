@@ -1,5 +1,5 @@
 import { LinkedinIcon } from '../../assets/icons';
-
+const linkedin = process.env.REACT_APP_LINKEDIN_URL
 export const Footer = () => {
   return (
     <footer className="w-10/12 mx-auto mb-auto bg-[#00021B] text-white text-xs md:text-base py-6 h-[180px]">
@@ -16,17 +16,7 @@ export const Footer = () => {
       <div className="w-full mx-auto flex flex-col items-center gap-y-4">
         <div className="text-semibold text-gray-500">Social</div>
         <div className="flex gap-x-2 md:gap-x-6 place-items-baseline mt-4">
-          {/* <div>
-            <FacebookIcon />
-          </div>
-          <div>
-            <InstagramIcon />
-          </div>
-          <div>
-            <TwitterIcon />
-          </div> */}
-          <div>
-            <a href='https://quantek.solutions' target='blank'>
+          <a href={linkedin} target="blank">
               <LinkedinIcon />
             </a>
           </div>
