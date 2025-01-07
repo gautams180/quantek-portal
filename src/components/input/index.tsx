@@ -22,7 +22,10 @@ export const Input: React.FC<Input> = ({
   labelClassName,
 }) => {
   const wrapperClass = clsx('flex flex-col font-poppins', className);
-  const labelClass = clsx('pb-1 text-white md:text-xl font-poppins', labelClassName);
+  const labelClass = clsx(
+    'pb-1 text-white md:text-xl font-poppins',
+    labelClassName,
+  );
   const inputClass = clsx(
     'bg-transparent w-full border-b outline-0 border-custom-pink text-white md:text-xl font-poppins',
     inputClassName,

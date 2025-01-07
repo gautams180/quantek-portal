@@ -4,7 +4,7 @@ import { Heading } from '../heading';
 
 export const ServiceSection = () => {
   return (
-    <div className="flex flex-col w-full px-8 my-10" id='services'>
+    <div className="flex flex-col w-full px-8 my-10" id="services">
       <Heading
         heading={'Our Service'}
         containerClass="!w-11/12 md:!w-6/12 mt-20 md:mt-12 flex flex-col items-center"
@@ -25,7 +25,7 @@ export const ServiceSection = () => {
             description={item.description}
             icon={item.icon}
             notch={true}
-            className='min-h-[30rem]'
+            className="min-h-[30rem]"
           />
         ))}
       </div>

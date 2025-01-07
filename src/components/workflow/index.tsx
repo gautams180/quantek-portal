@@ -1,16 +1,14 @@
 import { Heading } from '../heading';
 import { WORKFLOW_DATA } from '../../constants/header';
-import Devops from "../../assets/png/dev-ops.png"
+import Devops from '../../assets/png/dev-ops.png';
 
 export const Workflow = () => {
-
-
   return (
-    <div className="flex flex-col gap-12 w-full px-8 py-20 my-10" id='work'>
+    <div className="flex flex-col gap-12 w-full px-8 py-20 my-10" id="work">
       <Heading
         heading={'Workflow that just works'}
         containerClass="!w-11/12 md:!w-10/12 lg:!w-9/12 text-center md:text-start"
-        headingClass='lg:!text-7xl text-center'
+        headingClass="lg:!text-7xl text-center"
         subheading={
           <>
             At Quantek, we bridge IT strategy with execution, delivering
@@ -42,7 +40,11 @@ export const Workflow = () => {
             <div className="w-full">
               <img
                 src={item.image}
-                className={item.image === Devops ? "w-full mx-auto my-auto" : "w-full px-6 md:px-16 mx-auto my-auto"}
+                className={
+                  item.image === Devops
+                    ? 'w-full mx-auto my-auto'
+                    : 'w-full px-6 md:px-16 mx-auto my-auto'
+                }
               />
             </div>
           </div>

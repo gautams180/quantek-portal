@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export const Heading: React.FC<{
   heading: string;
@@ -7,12 +7,12 @@ export const Heading: React.FC<{
   headingClass?: string;
 }> = ({ heading, subheading, containerClass, headingClass }) => {
   const containerClassname = clsx(
-    "w-full mx-auto mb-8 text-center",
-    containerClass
+    'w-full mx-auto mb-8 text-center',
+    containerClass,
   );
   const headingClassname = clsx(
-    "text-4xl lg:text-7xl text-white font-bold",
-    headingClass
+    'text-4xl lg:text-7xl text-white font-bold',
+    headingClass,
   );
 
   return (

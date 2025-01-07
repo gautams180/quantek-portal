@@ -16,10 +16,10 @@ export const Footer = () => {
       <div className="w-full mx-auto flex flex-col items-center gap-y-4">
         <div className="text-semibold text-gray-500">Social</div>
         <div className="flex gap-x-2 md:gap-x-6 place-items-baseline mt-4">
+          
           <a href={linkedin} target="blank">
-              <LinkedinIcon />
-            </a>
-          </div>
+            <LinkedinIcon />
+          </a>
         </div>
       </div>
     </footer>

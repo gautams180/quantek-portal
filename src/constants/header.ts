@@ -113,43 +113,46 @@ export const CARDS_DATA = [
 export const WORKFLOW_DATA = [
   {
     heading: 'Agile',
-    subheading:{
-      title:  "Innovation, Adaptability, Excellence",
-      description: "Agile is not just a process -- its a mindset. At Quantek, we embrace flexibility and collaboration to create solutions that evolve with your needs. Together we craft exceptional outcomes through iterative planning, teamwork, and cutting-edge technology.",
-      steps:[{
-          name: "Plan:",
-          task: "Prioritize objectives with precision."
+    subheading: {
+      title: 'Innovation, Adaptability, Excellence',
+      description:
+        'Agile is not just a process -- its a mindset. At Quantek, we embrace flexibility and collaboration to create solutions that evolve with your needs. Together we craft exceptional outcomes through iterative planning, teamwork, and cutting-edge technology.',
+      steps: [
+        {
+          name: 'Plan:',
+          task: 'Prioritize objectives with precision.',
         },
         {
-          name: "Design:",
-          task: "Sketch creative, user-centric concepts."
+          name: 'Design:',
+          task: 'Sketch creative, user-centric concepts.',
         },
         {
-          name: "Develop:",
-          task: "Build scalable, future-proof applications."
+          name: 'Develop:',
+          task: 'Build scalable, future-proof applications.',
         },
         {
-          name: "Test:",
-          task: "Guarantee quality through rigorous checks."
+          name: 'Test:',
+          task: 'Guarantee quality through rigorous checks.',
         },
         {
-          name: "Launch:",
-          task: "Deliver excellence with confidence."
+          name: 'Launch:',
+          task: 'Deliver excellence with confidence.',
         },
         {
-          name: "Deploy:",
-          task: "Innovate continuously in real time."
+          name: 'Deploy:',
+          task: 'Innovate continuously in real time.',
         },
       ],
-        conclusion: "Your success is a journey. Agile ensures every step counts.",
-      },
+      conclusion: 'Your success is a journey. Agile ensures every step counts.',
+    },
     image: Agile,
   },
   {
     heading: 'DevOps',
-    subheading:{
-      title: "Where Development Meets Operational Excellence",
-      description: "Say goodbye to silos! DevOps combines innovation and reliability into a seamless workflow that accelerates delivery while ensuring peak performance.",
+    subheading: {
+      title: 'Where Development Meets Operational Excellence',
+      description:
+        'Say goodbye to silos! DevOps combines innovation and reliability into a seamless workflow that accelerates delivery while ensuring peak performance.',
       // steps:[{
       //     name: "Collaborate:",
       //     task: "Foster synergy between teams.",
@@ -173,23 +176,26 @@ export const WORKFLOW_DATA = [
   },
   {
     heading: 'Learn',
-    subheading:{
-      title: "Simplify. Refine. Deliver Value.",
-      description: "Lean isn’t just about efficiency—it’s about making every moment, resource, and effort count. By focusing on what matters most, we cut through complexity to deliver meaningful results.",
-      steps:[{
-          name: "Value Stream:",
-          task: "Map what truly adds value.",
+    subheading: {
+      title: 'Simplify. Refine. Deliver Value.',
+      description:
+        'Lean isn’t just about efficiency—it’s about making every moment, resource, and effort count. By focusing on what matters most, we cut through complexity to deliver meaningful results.',
+      steps: [
+        {
+          name: 'Value Stream:',
+          task: 'Map what truly adds value.',
         },
         {
-          name: "Iterate:",
-          task: "Continuously improve processes.",
+          name: 'Iterate:',
+          task: 'Continuously improve processes.',
         },
         {
-          name: "Deliver Value:",
-          task: "Design experiences that inspire.",
+          name: 'Deliver Value:',
+          task: 'Design experiences that inspire.',
         },
       ],
-      conclusion: "Efficiency isn’t the end goal; delivering unparalleled value is.",
+      conclusion:
+        'Efficiency isn’t the end goal; delivering unparalleled value is.',
     },
     image: Lean,
   },
