@@ -78,27 +78,12 @@ export const Navbar: React.FC = () => {
           !hamburgerMenu ? (
             <div className="flex gap-20 justify-end w-5/12">
               {HEADERS.map((item: HeaderItem, index: number) => (
-                <Link
-                  className={activeElementId == item.id ? ("text-base border-b-2 border-b-[#D70F98] cursor-pointer") : "text-base cursor-pointer hover:border-b-2 border-b-[#D70F98] transition-all duration-200"}
+              <NavbarLink
+                item={item}
+                activeElementId={activeElementId}
+                setActiveElementId={setActiveElementId}
                   key={index}
-                  to={item.link}
-
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate(item.link)
-                    setTimeout(() => {
-                      scroller.scrollTo(item.id,{
-                        duration: 1000,
-                        delay: 50,
-                        smooth: true,
-                        offset: -50,
-                      })
-                    },500);
-                    setActiveElementId(item.id);
-                  }}
-                >
-                  {item.label}
-                </Link>
+              />
               ))}
             </div>
           ) : (
@@ -115,24 +100,17 @@ export const Navbar: React.FC = () => {
                         </button>
                         <div className="flex flex-col gap-2 items-start w-5/12">
                           {HEADERS.map((item: HeaderItem, index: number) => (
-                            <button onClick={() => {setShowOption(false)}}>
-                              <Link
-                                className={item.link === location.pathname ? ("text-base border-b-2 border-b-[#D70F98] cursor-pointer") : "text-base cursor-pointer hover:border-b-2 border-b-[#D70F98] transition-all duration-200"}
-                                key={index}
-                                to={item.link}
+                    <button
                                 onClick={() => {
-                                  setTimeout(() => {
-                                    scroller.scrollTo(item.id,{
-                                      duration: 1000,
-                                      delay: 50,
-                                      smooth: true,
-                                      offset: -50,
-                                    })
-                                  },500)
+                        setShowOption(false);
                                 }}
                               >
-                                {item.label}
-                              </Link>
+                      <NavbarLink
+                        item={item}
+                        activeElementId={activeElementId}
+                        setActiveElementId={setActiveElementId}
+                        key={index}
+                      />
                             </button>
                           ))}
                         </div>
