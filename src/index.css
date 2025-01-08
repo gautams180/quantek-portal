@@ -4,7 +4,7 @@
 
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Poppins, serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -31,6 +31,6 @@ body {
 .hero-section-header-1>span:first-child,
 .hero-section-header-2>span:last-child {
   color: transparent;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff
 }

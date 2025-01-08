@@ -7,38 +7,48 @@ interface GlassCardProps {
   description?: React.ReactNode;
   notch?: boolean;
   className?: string;
-  children?: React.ReactNode;
+  glassBgClassName?: string;
+  iconClass?: string;
 }
 
 export const GlassCard: React.FC<GlassCardProps> = ({
   icon,
   title,
   description,
-  children,
   notch = false,
   className = '',
+  glassBgClassName = '',
+  iconClass = '',
 }) => {
-  const glassBg =
-    'bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10';
 
   const cardClass = clsx(
     notch === true && styles['glassCard-notch'],
-    glassBg,
-    'my-4 rounded-sm relative flex flex-col px-8 py-8 overflow-hidden',
+    'bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10',
+    glassBgClassName,
+    'rounded-sm relative flex flex-col px-2 lg:px-4 md:py-[1rem] my-4 overflow-hidden',
     className,
   );
 
   return (
     <div className={cardClass}>
-      {children ? (
-        children
-      ) : (
-        <>
-          {icon && <div className="ml-auto my-4">{icon()}</div>}
-          <div className="text-4xl text-white font-bold my-4 ml-2">{title}</div>
-          <div className="text-base text-white my-4 ml-2">{description}</div>
-        </>
-      )}
+      <div className="mx-2">
+        {icon && (
+          <div
+            className={clsx(
+              'ml-auto my-8 w-20 lg:w-28 object-center',
+              iconClass,
+            )}
+          >
+            <img className="" src={icon} />
+          </div>
+        )}
+        <div className="text-3xl xl:text-4xl text-white font-bold my-0 ml-2">
+          {title}
+        </div>
+        <div className="text-sm text-white font-poppins my-2 ml-2 leading-relaxed">
+          {description}
+        </div>
+      </div>
     </div>
   );
 };

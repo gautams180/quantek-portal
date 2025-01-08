@@ -4,13 +4,14 @@ import FacebookIcon from './facebook.svg?react';
 import InstagramIcon from './instagram.svg?react';
 import TwitterIcon from './twitter.svg?react';
 import QuantekIcon from './quantek-pink.svg?react';
-import DevelopmentIcon from './development.svg?react';
-import BlockChainIcon from './blockchain.svg?react';
-import CloudComputingIcon from './cloud-computing.svg?react';
-import IntegrationIcon from './integration.svg?react';
-import QATestingIcon from './qa-testing.svg?react';
-import APIDevelopmentIcon from './api-development.svg?react';
-import UXDesignIcon from './ux-design.svg?react';
+import DevelopmentIcon from './development.svg';
+import BlockChainIcon from './blockchain.svg';
+import CloudComputingIcon from './cloud-computing.svg';
+import IntegrationIcon from './integration.svg';
+import QATestingIcon from './qa-testing.svg';
+import APIDevelopmentIcon from './api-development.svg';
+import UXDesignIcon from './ux-design.svg';
+import LinkedinIcon from "./linkedin.svg?react"
 
 export {
   UpArrowIcon,
@@ -25,4 +26,5 @@ export {
   QATestingIcon,
   UXDesignIcon,
   APIDevelopmentIcon,
+  LinkedinIcon
 };
